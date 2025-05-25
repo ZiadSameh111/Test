@@ -1,28 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Auto-play Video</title>
-<style>
-    body, html {
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-    }
-    video {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-</style>
+    <title>Super Mario</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #5c94fc; /* A sky-blue background, typical of Mario games */
+        }
+        canvas {
+            border: 1px solid black;
+            background-color: #ffffff; /* White background for the game area */
+        }
+    </style>
 </head>
 <body>
-<video autoplay muted loop>
-  <source src="0606.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+    <canvas id="gameCanvas" width="800" height="600"></canvas>
+    <script src="game.js"></script>
 </body>
 </html>
